@@ -7,7 +7,8 @@ from pathlib import Path
 st.set_page_config(page_title="Pareto Meeting Summarizer", page_icon="📊", layout="centered")
 
 # 2. Backend URL (Localhost for now)
-BACKEND_URL = os.environ.get("BACKEND_URL", "http://127.0.0.1:8000")
+# Change this line in app.py
+BACKEND_URL = os.environ.get("BACKEND_URL", "https://pareto-principle-summarizer-backend.onrender.com")
 
 # 3. CSS Styling
 st.markdown("""
@@ -80,4 +81,5 @@ if clicked:
                 <div class="summary-box">
                   <div class="summary-title">Executive Summary — Key Takeaways</div>
                   <div class="summary-content">{summary}</div>
+
                 </div>""", unsafe_allow_html=True)
